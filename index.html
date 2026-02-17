@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeJS App</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecipeJS Complete</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>RecipeJS</h1>
+  <header>
+    <h1>RecipeJS</h1>
+    <input type="text" id="search-input" placeholder="Search recipes...">
+    <button id="clear-search" style="display:none;">Clear</button>
+  </header>
 
-        <!-- Controls Section -->
-        <div class="controls">
-            <div class="filter-buttons">
-                <button data-filter="all" class="active">Show All</button>
-                <button data-filter="easy">Easy</button>
-                <button data-filter="medium">Medium</button>
-                <button data-filter="hard">Hard</button>
-                <button data-filter="quick">Quick (under 30 min)</button>
-            </div>
-            <div class="sort-buttons">
-                <button data-sort="none" class="active">Default Order</button>
-                <button data-sort="name">Name (A–Z)</button>
-                <button data-sort="time">Time (Fastest First)</button>
-            </div>
-        </div>
-
-        <!-- Recipes Container -->
-        <div id="recipe-container" class="recipe-container"></div>
+  <div id="controls">
+    <div class="filter-buttons">
+      <button data-filter="all" class="active">Show All</button>
+      <button data-filter="easy">Easy</button>
+      <button data-filter="medium">Medium</button>
+      <button data-filter="hard">Hard</button>
+      <button data-filter="quick">Quick Recipes</button>
+      <button data-filter="favorites">Favorites Only</button>
     </div>
+    <div class="sort-buttons">
+      <button data-sort="none" class="active">Default Order</button>
+      <button data-sort="name">Name (A-Z)</button>
+      <button data-sort="time">Time (Fastest First)</button>
+    </div>
+  </div>
 
-    <script src="app.js"></script>
+  <div id="recipe-counter">Showing 0 of 0 recipes</div>
+  <div id="recipe-container"></div>
+
+  <script src="app.js"></script>
 </body>
 </html>
